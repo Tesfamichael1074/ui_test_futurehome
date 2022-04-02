@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uitest1/components/button_groups.dart';
 import 'package:uitest1/components/card_content.dart';
 import 'package:uitest1/components/component_data_view.dart';
@@ -14,6 +15,13 @@ class CustomCard extends StatelessWidget {
     CustomIconButtons(icon: Icons.add, name: "Device"),
   ];
 
+  final Widget svg = SvgPicture.asset(
+    'lib/assets/svg/man.svg',
+    semanticsLabel: 'Acme Logo',
+    height: 15,
+    width: 15,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +35,7 @@ class CustomCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          color: Colors.black,
+          color: const Color(0xFF03A9F1),
         ),
       ),
       child: Column(

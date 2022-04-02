@@ -9,13 +9,12 @@ class CustomButtonGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Wrap(
-        children: buttons.map((e) {
-          return CustomButton();
-        }).toList(),
-      ),
+    return Wrap(
+      children: buttons.map((e) {
+        return CustomButton(
+          button: e,
+        );
+      }).toList(),
     );
   }
 }

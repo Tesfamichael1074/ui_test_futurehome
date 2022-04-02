@@ -19,7 +19,7 @@ class _MainCardState extends State<MainCard> {
         vertical: size.aspectRatio * 70,
         horizontal: size.width * 0.1,
       ),
-      padding: EdgeInsets.all(size.aspectRatio * 4),
+      padding: EdgeInsets.all(size.aspectRatio * 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: Colors.black),
