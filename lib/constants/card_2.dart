@@ -40,8 +40,16 @@ final card2FooterButtons = [
 ];
 
 final card2FooterButtons2 = [
-  CustomIconButtons(name: "Timeline"),
-  CustomIconButtons(name: "8Notes"),
+  CustomIconButtons(
+    name: "Timeline",
+    iconAlignment: CustomIconAlignMent.right,
+    icon: Icons.keyboard_arrow_right,
+  ),
+  CustomIconButtons(
+    name: "8Notes",
+    iconAlignment: CustomIconAlignMent.right,
+    icon: Icons.keyboard_arrow_right,
+  ),
 ];
 
 final card2Content = [

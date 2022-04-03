@@ -40,9 +40,10 @@ class _ContainerAppBarState extends State<ContainerAppBar> {
       child: Container(
         width: size.width,
         child: Wrap(
+          alignment: WrapAlignment.spaceBetween,
           children: [
             Container(
-              width: size.width * 0.55,
+              width: 300,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -61,6 +62,7 @@ class _ContainerAppBarState extends State<ContainerAppBar> {
               ),
             ),
             // const Spacer(),
+
             CustomButtonGroup(
               buttons: tempButtons,
             ),

@@ -28,6 +28,19 @@ final card3FooterButtons = [
   CustomIconButtons(name: "ping"),
 ];
 
+final card3FooterButtons2 = [
+  CustomIconButtons(
+    name: "Timeline",
+    iconAlignment: CustomIconAlignMent.right,
+    icon: Icons.keyboard_arrow_right,
+  ),
+  CustomIconButtons(
+    name: "8Notes",
+    iconAlignment: CustomIconAlignMent.right,
+    icon: Icons.keyboard_arrow_right,
+  ),
+];
+
 final card3Content = [
   {"key": "Address", "value": "2_0", "icon": true},
   {"key": "Device ID", "value": "1", "icon": false},

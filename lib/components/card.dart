@@ -74,7 +74,17 @@ class CustomCard extends StatelessWidget {
           ),
 
           // Buttons in the card
-          CustomButtonGroup(buttons: footerButtons),
+          Row(
+            children: [
+              Expanded(
+                child: CustomButtonGroup(buttons: footerButtons),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: CustomButtonGroup(buttons: footerButtons2),
+              ),
+            ],
+          ),
         ],
       ),
     );

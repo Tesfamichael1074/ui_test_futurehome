@@ -46,12 +46,14 @@ class _MainCardState extends State<MainCard> {
                   footerButtons: card2FooterButtons,
                   titleBarContents: card2TitleBarContents,
                   cardContent: card2Content,
+                  footerButtons2: card2FooterButtons2,
                 ),
                 CustomCard(
                   size: size,
                   footerButtons: card3FooterButtons,
                   titleBarContents: card3TitleBarContents,
                   cardContent: card3Content,
+                  footerButtons2: card3FooterButtons2,
                 ),
                 // CustomCard(
                 //   size: size,
