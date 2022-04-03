@@ -31,7 +31,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: size.height * 0.008,
+        vertical: size.height * 0.009,
       ),
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.01,
@@ -52,11 +52,17 @@ class CustomCard extends StatelessWidget {
             width: double.maxFinite,
             child: Wrap(
               alignment: WrapAlignment.spaceBetween,
-              children: titleBarContents.map((e) {
-                return CustomDataView(
-                  data: e,
-                );
-              }).toList(),
+              children: [
+                ...titleBarContents.map((e) {
+                  return CustomDataView(
+                    data: e,
+                  );
+                }).toList(),
+                Padding(
+                  padding: const EdgeInsets.only(right: 5.0),
+                  child: Icon(Icons.keyboard_arrow_up_sharp),
+                ),
+              ],
             ),
           ),
 

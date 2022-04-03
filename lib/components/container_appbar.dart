@@ -15,8 +15,8 @@ class _ContainerAppBarState extends State<ContainerAppBar> {
     CustomIconButtons(icon: Icons.add, name: "Room"),
     CustomIconButtons(icon: Icons.add, name: "Device"),
     CustomIconButtons(
-      icon: Icons.add,
-      name: "8 Notes",
+      icon: Icons.keyboard_arrow_right,
+      name: "8Notes",
       iconAlignment: CustomIconAlignMent.right,
     )
   ];
@@ -32,34 +32,40 @@ class _ContainerAppBarState extends State<ContainerAppBar> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     // Open Sans / 13 / Semi Bold
-    return Container(
-      width: size.width,
-      child: Wrap(
-        children: [
-          Container(
-            width: size.width * 0.55,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                svg,
-                Padding(
-                  padding: const EdgeInsets.only(left: 6.88),
-                  child: Text(
-                    "Common Area",
-                    style: GoogleFonts.openSans(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w600,
+    return Padding(
+      padding: EdgeInsets.only(
+        bottom: 5.0,
+        top: size.height * 0.01,
+      ),
+      child: Container(
+        width: size.width,
+        child: Wrap(
+          children: [
+            Container(
+              width: size.width * 0.55,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  svg,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 6.88),
+                    child: Text(
+                      "Common Area",
+                      style: GoogleFonts.openSans(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          // const Spacer(),
-          CustomButtonGroup(
-            buttons: tempButtons,
-          ),
-        ],
+            // const Spacer(),
+            CustomButtonGroup(
+              buttons: tempButtons,
+            ),
+          ],
+        ),
       ),
     );
   }

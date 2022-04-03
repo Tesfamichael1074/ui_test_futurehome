@@ -19,43 +19,49 @@ class _MainCardState extends State<MainCard> {
 
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: size.aspectRatio * 70,
         horizontal: size.width * 0.1,
       ),
-      padding: EdgeInsets.all(size.aspectRatio * 5),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: Colors.black),
-      ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ContainerAppBar(),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: size.aspectRatio * 5),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.black),
+            ),
+            child: Column(
+              children: [
+                ContainerAppBar(),
 
-          // component card
-          CustomCard(
-            size: size,
-            footerButtons: card1FooterButtons,
-            titleBarContents: card1TitleBarContents,
-            cardContent: card1Content,
+                // component card
+                CustomCard(
+                  size: size,
+                  footerButtons: card1FooterButtons,
+                  titleBarContents: card1TitleBarContents,
+                  cardContent: card1Content,
+                ),
+                CustomCard(
+                  size: size,
+                  footerButtons: card2FooterButtons,
+                  titleBarContents: card2TitleBarContents,
+                  cardContent: card2Content,
+                ),
+                CustomCard(
+                  size: size,
+                  footerButtons: card3FooterButtons,
+                  titleBarContents: card3TitleBarContents,
+                  cardContent: card3Content,
+                ),
+                // CustomCard(
+                //   size: size,
+                // ),
+                // CustomCard(
+                //   size: size,
+                // ),
+              ],
+            ),
           ),
-          CustomCard(
-            size: size,
-            footerButtons: card2FooterButtons,
-            titleBarContents: card2TitleBarContents,
-            cardContent: card2Content,
-          ),
-          CustomCard(
-            size: size,
-            footerButtons: card3FooterButtons,
-            titleBarContents: card3TitleBarContents,
-            cardContent: card3Content,
-          ),
-          // CustomCard(
-          //   size: size,
-          // ),
-          // CustomCard(
-          //   size: size,
-          // ),
         ],
       ),
     );
