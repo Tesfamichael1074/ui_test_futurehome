@@ -36,7 +36,12 @@ final card2FooterButtons = [
   CustomIconButtons(name: "identify"),
   CustomIconButtons(name: "ping"),
   CustomIconButtons(name: "Sensitivity"),
-  CustomIconButtons(name: "Test Siren"),
+  CustomIconButtons(name: "Test Siren", outlined: true),
+];
+
+final card2FooterButtons2 = [
+  CustomIconButtons(name: "Timeline"),
+  CustomIconButtons(name: "8Notes"),
 ];
 
 final card2Content = [

@@ -19,6 +19,16 @@ class CustomButton extends StatelessWidget {
     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18.0),
+      ),
+    ),
+  );
+
+  final ButtonStyle outlinedStyle = ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Color(0xFF2D3436)),
+    backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(18.0),
         side: const BorderSide(
           color: Color(0xFF2D3436),
         ),
@@ -50,7 +60,7 @@ class CustomButton extends StatelessWidget {
             : ElevatedButton(
                 onPressed: () {},
                 child: title,
-                style: style,
+                style: button.outlined ? outlinedStyle : style,
               ),
       ),
     );

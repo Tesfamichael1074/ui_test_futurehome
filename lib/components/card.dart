@@ -13,12 +13,14 @@ class CustomCard extends StatelessWidget {
     this.size,
     required this.titleBarContents,
     required this.footerButtons,
+    this.footerButtons2 = const [],
     required this.cardContent,
   }) : super(key: key);
 
   final List<Map<String, dynamic>> cardContent;
   final List<CustomDataViewModel> titleBarContents;
   final List<CustomIconButtons> footerButtons;
+  final List<CustomIconButtons> footerButtons2;
 
   final Widget svg = SvgPicture.asset(
     'lib/assets/svg/man.svg',
