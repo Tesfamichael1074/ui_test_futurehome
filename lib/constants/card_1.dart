@@ -29,5 +29,5 @@ final card1FooterButtons = [
 ];
 
 final card1Content = [
-  {"key": "Updated AT", "value": "01.01.1970"},
+  {"key": "Updated AT", "value": "01.01.1970", "icon": false},
 ];

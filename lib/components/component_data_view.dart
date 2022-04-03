@@ -35,8 +35,11 @@ class CustomDataView extends StatelessWidget {
           children: [
             if (firstIcon != null) firstIcon!,
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(data.title),
+              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+              child: Text(
+                data.title,
+                style: data.textStyle,
+              ),
             ),
             if (data.lastIcon != null) lastIcon!,
           ],

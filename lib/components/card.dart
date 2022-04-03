@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uitest1/components/button_groups.dart';
 import 'package:uitest1/components/card_content.dart';
 import 'package:uitest1/components/component_data_view.dart';
-import 'package:uitest1/constants/card_1.dart';
 import 'package:uitest1/models/custom_data_views_model.dart';
 import 'package:uitest1/models/custom_icon_buttons_model.dart';
 
@@ -14,7 +13,10 @@ class CustomCard extends StatelessWidget {
     this.size,
     required this.titleBarContents,
     required this.footerButtons,
+    required this.cardContent,
   }) : super(key: key);
+
+  final List<Map<String, dynamic>> cardContent;
   final List<CustomDataViewModel> titleBarContents;
   final List<CustomIconButtons> footerButtons;
 
@@ -29,7 +31,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: size.height * 0.02,
+        vertical: size.height * 0.008,
       ),
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.01,
@@ -60,7 +62,7 @@ class CustomCard extends StatelessWidget {
 
           // Middle content
           CardContents(
-            content: card1Content,
+            content: cardContent,
           ),
 
           // Buttons in the card

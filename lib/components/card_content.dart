@@ -16,9 +16,9 @@ class CardContents extends StatelessWidget {
           child: Column(
             children: content
                 .map((e) => CardContentItem(
-                      title: "Updated AT",
-                      subtitle: "01.01.1970",
-                      showIcon: true,
+                      title: e["key"],
+                      subtitle: e["value"],
+                      showIcon: e["icon"],
                     ))
                 .toList(),
           )),
