@@ -37,12 +37,12 @@ class _ContainerAppBarState extends State<ContainerAppBar> {
         bottom: 5.0,
         top: size.height * 0.01,
       ),
-      child: Container(
+      child: SizedBox(
         width: size.width,
         child: Wrap(
           alignment: WrapAlignment.spaceBetween,
           children: [
-            Container(
+            SizedBox(
               width: 300,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,

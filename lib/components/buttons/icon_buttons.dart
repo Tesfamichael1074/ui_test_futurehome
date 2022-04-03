@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uitest1/models/custom_icon_buttons_model.dart';
+import 'package:uitest1/theme/colors.dart';
+import 'package:uitest1/theme/text_styles.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton({required this.button}) {
@@ -12,29 +14,6 @@ class CustomButton extends StatelessWidget {
       ),
     );
   }
-
-  final ButtonStyle style = ButtonStyle(
-    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-    backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF2D3436)),
-    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-      RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18.0),
-      ),
-    ),
-  );
-
-  final ButtonStyle outlinedStyle = ButtonStyle(
-    foregroundColor: MaterialStateProperty.all<Color>(Color(0xFF2D3436)),
-    backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-      RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18.0),
-        side: const BorderSide(
-          color: Color(0xFF2D3436),
-        ),
-      ),
-    ),
-  );
 
   late Widget title;
   final CustomIconButtons button;
@@ -50,7 +29,7 @@ class CustomButton extends StatelessWidget {
         child: button.icon != null
             ? ElevatedButton.icon(
                 onPressed: () {},
-                style: style,
+                style: cardButtonstyle,
                 icon: Icon(
                   button.icon,
                   size: 15,
@@ -60,7 +39,8 @@ class CustomButton extends StatelessWidget {
             : ElevatedButton(
                 onPressed: () {},
                 child: title,
-                style: button.outlined ? outlinedStyle : style,
+                style:
+                    button.outlined ? cardButtonstyleOutlined : cardButtonstyle,
               ),
       ),
     );

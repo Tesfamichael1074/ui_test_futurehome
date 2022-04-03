@@ -5,6 +5,7 @@ import 'package:uitest1/components/card_content.dart';
 import 'package:uitest1/components/component_data_view.dart';
 import 'package:uitest1/models/custom_data_views_model.dart';
 import 'package:uitest1/models/custom_icon_buttons_model.dart';
+import 'package:uitest1/theme/colors.dart';
 
 class CustomCard extends StatelessWidget {
   final size;
@@ -43,7 +44,7 @@ class CustomCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          color: const Color(0xFF03A9F1),
+          color: blueMainColor,
         ),
       ),
       child: Column(

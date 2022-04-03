@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uitest1/models/custom_data_views_model.dart';
 import 'package:uitest1/models/custom_icon_buttons_model.dart';
+import 'package:uitest1/theme/text_styles.dart';
 
 final card2TitleBarContents = [
   CustomDataViewModel(
@@ -10,18 +11,12 @@ final card2TitleBarContents = [
   CustomDataViewModel(
     firstIcon: "lib/assets/svg/exclamation.svg",
     title: "Offline",
-    textStyle: TextStyle(
-      color: Color(0xFFF18303),
-      fontWeight: FontWeight.w600,
-    ),
+    textStyle: cardDataTextStyle,
   ),
   CustomDataViewModel(
     firstIcon: "lib/assets/svg/exclamation.svg",
     title: "Tampered",
-    textStyle: TextStyle(
-      color: Color(0xFFF18303),
-      fontWeight: FontWeight.w600,
-    ),
+    textStyle: cardDataTextStyle,
   ),
   CustomDataViewModel(
     firstIcon: "lib/assets/svg/check.svg",
