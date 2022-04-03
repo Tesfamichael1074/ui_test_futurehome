@@ -3,17 +3,20 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uitest1/components/button_groups.dart';
 import 'package:uitest1/components/card_content.dart';
 import 'package:uitest1/components/component_data_view.dart';
+import 'package:uitest1/constants/card_1.dart';
+import 'package:uitest1/models/custom_data_views_model.dart';
 import 'package:uitest1/models/custom_icon_buttons_model.dart';
 
 class CustomCard extends StatelessWidget {
   final size;
-  CustomCard({Key? key, this.size}) : super(key: key);
-
-  final tempButtons = [
-    CustomIconButtons(icon: Icons.add, name: "Contact"),
-    CustomIconButtons(icon: Icons.add, name: "Room"),
-    CustomIconButtons(icon: Icons.add, name: "Device"),
-  ];
+  CustomCard({
+    Key? key,
+    this.size,
+    required this.titleBarContents,
+    required this.footerButtons,
+  }) : super(key: key);
+  final List<CustomDataViewModel> titleBarContents;
+  final List<CustomIconButtons> footerButtons;
 
   final Widget svg = SvgPicture.asset(
     'lib/assets/svg/man.svg',
@@ -30,6 +33,7 @@ class CustomCard extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(
         vertical: size.height * 0.01,
+        horizontal: size.width * 0.001,
       ),
       width: double.maxFinite,
       decoration: BoxDecoration(
@@ -46,19 +50,21 @@ class CustomCard extends StatelessWidget {
             width: double.maxFinite,
             child: Wrap(
               alignment: WrapAlignment.spaceBetween,
-              children: const [
-                CustomDataView(),
-                CustomDataView(),
-                CustomDataView(),
-              ],
+              children: titleBarContents.map((e) {
+                return CustomDataView(
+                  data: e,
+                );
+              }).toList(),
             ),
           ),
 
           // Middle content
-          CardContents(),
+          CardContents(
+            content: card1Content,
+          ),
 
           // Buttons in the card
-          CustomButtonGroup(buttons: tempButtons),
+          CustomButtonGroup(buttons: footerButtons),
         ],
       ),
     );

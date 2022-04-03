@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uitest1/components/card.dart';
 import 'package:uitest1/components/container_appbar.dart';
+import 'package:uitest1/constants/card_1.dart';
 
 class MainCard extends StatefulWidget {
   const MainCard({Key? key}) : super(key: key);
@@ -31,13 +32,15 @@ class _MainCardState extends State<MainCard> {
           // component card
           CustomCard(
             size: size,
+            footerButtons: card1FooterButtons,
+            titleBarContents: card1TitleBarContents,
           ),
-          CustomCard(
-            size: size,
-          ),
-          CustomCard(
-            size: size,
-          ),
+          // CustomCard(
+          //   size: size,
+          // ),
+          // CustomCard(
+          //   size: size,
+          // ),
         ],
       ),
     );

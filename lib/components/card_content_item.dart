@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:uitest1/components/component_data_view.dart';
+import 'package:uitest1/models/custom_data_views_model.dart';
 
 class CardContentItem extends StatelessWidget {
-  const CardContentItem({Key? key}) : super(key: key);
+  const CardContentItem({
+    Key? key,
+    required this.title,
+    required this.subtitle,
+    this.showIcon = false,
+  }) : super(key: key);
+
+  final String title;
+  final String subtitle;
+  final bool showIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -10,21 +22,22 @@ class CardContentItem extends StatelessWidget {
       children: [
         Container(
           width: 200,
-          child: const Text("Updated at"),
-        ),
-        Container(
-          width: 200,
-          child: Row(
-            children: const [
-              Text("01.01.1970"),
-              Icon(
-                Icons.dashboard_customize_outlined,
-                size: 15,
-                color: Color(0xFF85949A),
-              ),
-            ],
+          child: Text(
+            title.toUpperCase(),
+            style: GoogleFonts.openSans(
+              fontSize: 11,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
+        Container(
+            width: 200,
+            child: CustomDataView(
+              data: CustomDataViewModel(
+                lastIcon: showIcon ? "lib/assets/svg/copy.svg" : null,
+                title: subtitle,
+              ),
+            )),
       ],
     );
   }
